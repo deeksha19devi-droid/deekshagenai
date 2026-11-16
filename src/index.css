@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-plum-canvas: #110715;
+  --color-plum-surface: #1A0D21;
+  --color-plum-elevated: #23122C;
+  --color-plum-hairline: #3B1E4A;
+  --color-ink-light: #FAF5F8;
+  --color-ink-muted: #C8B0C2;
+  --color-pink-accent: #F7B8D6;
+  --color-pink-hover: #FBCBE2;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--color-plum-canvas);
+    color: var(--color-ink-light);
+    letter-spacing: 0.005em;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-display);
+  }
+
+  button, a, input, select, textarea {
+    outline-color: var(--color-pink-accent);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.bg-futuristic-grid {
+  background-image:
+    linear-gradient(to right, rgba(247, 184, 214, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(247, 184, 214, 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

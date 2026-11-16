@@ -1,0 +1,6 @@
+{
+  "name": "Sri Krishna Arts and Science College",
+  "description": "Official institutional website for Sri Krishna Arts and Science College (Autonomous), Kuniyamuthur, Coimbatore — academic programmes, research centres, campus life, placements, and admissions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
